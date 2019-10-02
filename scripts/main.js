@@ -51,6 +51,7 @@ function blink() {
                 show_top_right = false;
                 should_accumulate_left = true;
                 document.getElementById("left_words").innerHTML = top_left_result;
+                document.getElementById("topright").getElementsByClassName("words")[0].innerHTML = "";
                 fuck_array = ["DO", "THEY", "GIVE", "A", "FUCK", "?"];
                 document.getElementById("bottomwords").innerHTML = "";
                 document.getElementById("yes_div").getElementsByClassName("words")[0].innerHTML = "";
