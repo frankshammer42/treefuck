@@ -30,15 +30,19 @@ function blink() {
         }
         blink_counter += 1;
     }
-    if (blink_counter > 10){
-        let index = blink_counter - 11;
+    if (blink_counter > 3){
+        let index = blink_counter - 4;
         document.getElementById("topright").getElementsByClassName("words")[0].innerHTML = top_right_element;
         if (index < fuck_array.length){
             document.getElementById("bottomwords").innerHTML += fuck_array[index] + "</br>";
         }
         else {
             // Let's just reset all the code
-            if (index > 2){
+            if (index === fuck_array.length){
+                document.getElementById("yes_div").getElementsByClassName("words")[0].innerHTML = "YES " + yes_counter;
+                document.getElementById("no_div").getElementsByClassName("words")[0].innerHTML = "NO " + no_counter;
+            }
+            if (index > 10){
                 blink_counter = 0;
                 top_left_accumulate_counter = 0;
                 top_left_result = "LOOK AT THE TREES " + position;
@@ -49,6 +53,8 @@ function blink() {
                 document.getElementById("left_words").innerHTML = top_left_result;
                 fuck_array = ["DO", "THEY", "GIVE", "A", "FUCK", "?"];
                 document.getElementById("bottomwords").innerHTML = "";
+                document.getElementById("yes_div").getElementsByClassName("words")[0].innerHTML = "";
+                document.getElementById("no_div").getElementsByClassName("words")[0].innerHTML = "";
             }
         }
     }
@@ -85,8 +91,8 @@ window.onload = function() {
     should_accumulate_left = true;
     document.getElementById("left_words").innerHTML = single_top_left;
     fuck_array = ["DO", "THEY", "GIVE", "A", "FUCK", "?"];
-    setInterval(blink, 800);
-    setInterval(accumulate_left, 1000);
+    setInterval(blink, 400);
+    setInterval(accumulate_left,  400);
 
     document.getElementById("yes_div").getElementsByClassName("words")[0].addEventListener('mouseover', function (event) {
         event.target.style.background = "white";
