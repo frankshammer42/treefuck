@@ -1,0 +1,98 @@
+body, html {
+    height: 100%;
+}
+
+#grid {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+#top {
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+}
+
+#topleft{
+    flex: 50%;
+    background: #8e8e93;
+    font-style: italic;
+}
+
+#topright{
+    flex: 50%;
+    background: #aeaeb2;
+    font-family: Futura;
+    font-size: 150px;
+    font-style: oblique;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+}
+
+#bottomleft{
+    flex: 50%;
+    background: #c7c7cc;
+}
+
+#bottomright{
+    flex: 50%;
+    background: #d1d1d6;
+    display: flex;
+    flex-direction: row;
+    font-family: Futura;
+    font-size: 200px;
+}
+
+#yes_div{
+    top: 50%;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    background: #aeaeb2;
+}
+
+#no_div{
+    top: 50%;
+    margin: auto;
+    height: 100%;
+    text-align: center;
+    width: 50%;
+    background: gainsboro;
+}
+
+.words {
+    position: relative;
+    top: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#left_words{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-family: Futura;
+    font-size: 100px;
+}
+
+#bottomwords{
+    position: relative;
+    top: 10%;
+    margin: auto;
+    text-align: center;
+    font-family: Futura;
+    font-size: 130px;
+    font-weight: bolder;
+}
+
+
+
+
+
